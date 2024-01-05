@@ -36,7 +36,7 @@ const MenuCard : React.FC<MenuItem> = (item) => {
     <ul className="menu-list">
       <li className="menu-label">{item.label}</li>
       <li>
-        <Link to={item.url && item.url} className={combinedClassName} onClick={onClickHandler}>
+        <Link to={item.url && item.url as string} className={combinedClassName} onClick={onClickHandler}>
           <img src={item.icon} alt={item.label} />
           {item.title}
         </Link>
@@ -44,7 +44,7 @@ const MenuCard : React.FC<MenuItem> = (item) => {
           <ul className={` ${open ? "show" : "content"}`}>
             {item.listItems?.map((list) => (
               <li className="menu--list" key={list.id}>
-                <Link to={list.url}>
+                <Link to={list.url as string}>
                   <FaLongArrowAltRight />
                   {list.title}
                 </Link>
