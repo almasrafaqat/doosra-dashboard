@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const MenuCard = (item) => {
+interface MenuItem {
+  id: number;
+  label: string;
+  title: string;
+  url?: string;
+  icon: string;
+  listItems?: ListItem[];
+}
+
+interface ListItem {
+  id: number;
+  title: string;
+  url: string;
+}
+
+const MenuCard : React.FC<MenuItem> = (item) => {
+
   const hasarrow = item?.listItems;
+
   const [open, setOpen] = useState(false);
 
-  const onClickHandler = (event) => {
+  const onClickHandler = () => {
     setOpen((prevState) => !prevState);
     // setOpen(!open);
   };
+  
   const combinedClassName = `${hasarrow ? "has-arrow" : ""} ${
     open && hasarrow ? "has-arrow arrow-down" : ""
   }`;
