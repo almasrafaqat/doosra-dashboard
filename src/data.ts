@@ -46,17 +46,23 @@ export const menu: MenuItem[] = [
       },
       {
         id: 2,
+        title: "add-product",
+        url: "/add-product",
+      },
+      {
+        id: 3,
         title: "users",
         url: "/users",
       },
+     
     ],
   },
   {
     id: 3,
     label: "ui maintenance",
-    title: "Maintenance",
-    url: "/products",
-    icon: "setting.svg",
+    title: "form",
+    url: "/form",
+    icon: "element.svg",
     
   },
   {

@@ -12,7 +12,7 @@ const Add = (props: Props) => {
   }
   return (
     <div className="add">
-      <div className="modal">
+      <div className="add-modal">
         <h1>Add new {props.slug}</h1>
         <span className="close" onClick={() => props.setOpen(false)}>X</span>
         <form onSubmit={handleSubmit}>

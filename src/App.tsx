@@ -9,13 +9,16 @@ import Login from "./pages/login/Login";
 import "./styles/global.scss";
 import Product from "./pages/product/Product";
 import User from "./pages/user/User";
+import ProductAddForm from "./components/productAddForm/ProductAddForm";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FormComponent from "./components/form/Form-component";
 
 function App() {
   const Layout = () => {
     return (
       <div className="main">
         <Navbar />
-        <div className="container">
+        <div className="main-content">
           <div className="menuContainer">
             <Menu />
           </div>
@@ -51,6 +54,14 @@ function App() {
         {
           path: "products/:id",
           element: <Product />,
+        },
+        {
+          path: "add-product",
+          element: <ProductAddForm />,
+        },
+        {
+          path: "form",
+          element: <FormComponent />,
         },
       ],
     },
