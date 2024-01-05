@@ -36,7 +36,7 @@ export const menu: MenuItem[] = [
     id: 2,
     label: "ui products",
     title: "products",
-    url: "",
+    url: "/",
     icon: "product.svg",
     listItems: [
       {
