@@ -1,115 +1,159 @@
-export const menu = [
+import React from "react";
+
+interface ListItem {
+  id: number;
+  title: string;
+  url: string;
+}
+
+interface MenuItem {
+  id: number;
+  label: string;
+  title: string;
+  url: string;
+  icon: string;
+  listItems?: ListItem[];
+}
+export const menu: MenuItem[] = [
   {
     id: 1,
-    title: "main",
+    label: "ui dashboard",
+    title: "Home",
+    url: "/",
+    icon: "home.svg",
     listItems: [
       {
         id: 1,
-        title: "Homepage",
+        title: "dashboard",
         url: "/",
-        icon: "home.svg",
       },
       {
-        id: 2,
-        title: "Profile",
+        id: 1,
+        title: "profile",
         url: "/",
-        icon: "user.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "lists",
+    label: "ui products",
+    title: "products",
+    url: "",
+    icon: "product.svg",
     listItems: [
       {
         id: 1,
-        title: "Users",
-        url: "/users",
-        icon: "user.svg",
+        title: "products",
+        url: "/products",
       },
       {
         id: 2,
-        title: "Products",
-        url: "/products",
-        icon: "product.svg",
-      },
-      {
-        id: 3,
-        title: "Orders",
-        url: "/",
-        icon: "order.svg",
-      },
-      {
-        id: 4,
-        title: "Posts",
-        url: "/",
-        icon: "post2.svg",
+        title: "users",
+        url: "/users",
       },
     ],
   },
   {
     id: 3,
-    title: "general",
-    listItems: [
-      {
-        id: 1,
-        title: "Elements",
-        url: "/",
-        icon: "element.svg",
-      },
-      {
-        id: 2,
-        title: "Notes",
-        url: "/",
-        icon: "note.svg",
-      },
-      {
-        id: 3,
-        title: "Forms",
-        url: "/",
-        icon: "form.svg",
-      },
-      {
-        id: 4,
-        title: "Calendar",
-        url: "/",
-        icon: "calendar.svg",
-      },
-    ],
+    label: "ui maintenance",
+    title: "Maintenance",
+    url: "/products",
+    icon: "setting.svg",
+    
   },
   {
     id: 4,
-    title: "Maintenance",
+    label: "ui Profile",
+    title: "Profile",
+    url: "/",
+    icon: "user.svg",
     listItems: [
       {
         id: 1,
-        title: "Settings",
+        title: "Profile 1",
         url: "/",
-        icon: "setting.svg",
       },
       {
         id: 2,
-        title: "Backups",
+        title: "Profile 2",
         url: "/",
-        icon: "backup.svg",
+      },
+      {
+        id: 3,
+        title: "Profile 2",
+        url: "/",
       },
     ],
   },
   {
     id: 5,
-    title: "analytics",
+    label: "ui lists",
+    title: "lists",
+    url: "/",
+    icon: "order.svg",
     listItems: [
       {
         id: 1,
-        title: "Charts",
+        title: "order 1",
         url: "/",
-        icon: "chart.svg",
       },
       {
         id: 2,
-        title: "Logs",
+        title: "order 2",
         url: "/",
-        icon: "log.svg",
+      },
+      {
+        id: 3,
+        title: "order 2",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 6,
+    label: "ui generals",
+    title: "general",
+    url: "/",
+    icon: "element.svg",
+    listItems: [
+      {
+        id: 1,
+        title: "Elements 1",
+        url: "/",
+      },
+      {
+        id: 2,
+        title: "Elements 2",
+        url: "/",
+      },
+      {
+        id: 3,
+        title: "Elements 2",
+        url: "/",
+      },
+    ],
+  },
+  {
+    id: 5,
+    label: "ui notes",
+    title: "notes",
+    url: "/",
+    icon: "note.svg",
+    listItems: [
+      {
+        id: 1,
+        title: "notes 1",
+        url: "/",
+      },
+      {
+        id: 2,
+        title: "notes 2",
+        url: "/",
+      },
+      {
+        id: 3,
+        title: "notes 2",
+        url: "/",
       },
     ],
   },
