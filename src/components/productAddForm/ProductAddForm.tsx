@@ -60,7 +60,7 @@ const ProductAddForm = () => {
                     <textarea
                       className="form-control"
                       id="inputProductDescription"
-                      rows="3"
+                      
                     ></textarea>
                   </div>
                   <div className="mb-3">
