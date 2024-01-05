@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 interface MenuItem {
@@ -27,7 +27,7 @@ const MenuCard : React.FC<MenuItem> = (item) => {
     setOpen((prevState) => !prevState);
     // setOpen(!open);
   };
-  
+
   const combinedClassName = `${hasarrow ? "has-arrow" : ""} ${
     open && hasarrow ? "has-arrow arrow-down" : ""
   }`;
@@ -36,18 +36,18 @@ const MenuCard : React.FC<MenuItem> = (item) => {
     <ul className="menu-list">
       <li className="menu-label">{item.label}</li>
       <li>
-        <NavLink to={item.url && item.url} className={combinedClassName} onClick={onClickHandler}>
+        <Link to={item.url && item.url} className={combinedClassName} onClick={onClickHandler}>
           <img src={item.icon} alt={item.label} />
           {item.title}
-        </NavLink>
+        </Link>
         {item.listItems && (
           <ul className={` ${open ? "show" : "content"}`}>
             {item.listItems?.map((list) => (
               <li className="menu--list" key={list.id}>
-                <NavLink to={list.url}>
+                <Link to={list.url}>
                   <FaLongArrowAltRight />
                   {list.title}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>

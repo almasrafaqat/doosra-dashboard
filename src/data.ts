@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ListItem {
   id: number;
   title: string;
